@@ -1,11 +1,11 @@
 # LAN Messenger
-A LAN messenger app to connect to users over the same network.
+A messenger app to connect to users over the same network.
 
 ## Features
-- **Automatic Contact List**: Every user on the network automatically has everyone else's contact
+- **Contact List**: Every user on the network automatically has everyone else's contact
 - **Group Chats**: Users can create and manage groups with options to add and remove members
 - **Media Support**: Images, videos, and audio files can be sent in chats
-- **Profile Customisation**: Users can change their profile picture, statuses and toggle light/dark mode
+- **Profile Customisation**: Users can change their profile picture, status and toggle light/dark mode
 
 ## Requirements
 Make sure to install the following dependencies:
@@ -34,9 +34,9 @@ node server.js
 
 ## How it works
 The app has a simple structure between the server, client and database. Most functions follow a three-step process:  
-1. **Client Action**: A user performs an action (e.g. updating their status or sending a message).
-2. **Database Update**: The server updates the corresponding data in the database (e.g. changes the user's status in the users table).
-3. **Server Broadcast**: The server broadcasts the update to all the connected clients.
+1. A user performs an action (e.g. updating their status or sending a message).
+2. The server updates the corresponding data in the database (e.g. changes the user's status in the 'users' table).
+3. The server broadcasts the update to all the connected clients.
 
 ## Examples
 ![](https://github.com/crazerly/lan-messenger/blob/main/imgs/contact_chat.png?raw=true)
@@ -53,5 +53,5 @@ _Dark mode_
 - The 'New' notification should disappear when the contact is clicked on, not once it's clicked out of
 
 ## Planned Features
-- [ ] Public-Key End-to-End Encryption
-- [ ] Client-side File compression
+- [ ] Public-Key E2EE
+- [ ] Client-side File Compression
