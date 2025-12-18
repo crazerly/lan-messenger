@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>_messenger</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <!-- App -->
+    <div id="app">
+      <aside class="sidebar">
+        <header id="sidebar-header">
+          <div class="brand">
+            <div class="dot"></div>
+            <span>_messenger</span>
+          </div>
+          <button id="profile-btn" title="Profile">Profile</button>
+        </header>
+
+        <section id="search-container">
+          <input id="search-input" placeholder="Search contacts or groups" />
+          <button id="group-btn" title="Create group">+ Group</button>
+        </section>
+
+        <section class="sidebar-section">
+          <h4>Contacts</h4>
+          <div id="contacts-list" class="list"></div>
+        </section>
+
+        <section class="sidebar-section">
+          <h4>Groups</h4>
+          <div id="groups-list" class="list"></div>
+        </section>
+      </aside>
+
+      <main class="chat">
+        <header class="chat-header">
+          <div class="chat-title">
+            <div id="chat-avatar" class="avatar">A</div>
+            <div>
+              <div id="chat-name">Select a contact</div>
+              <div id="chat-status">Offline</div>
+            </div>
+          </div>
+          <div id="header-right"></div>
+        </header>
+        <section id="messages" class="chat-body"></section>
+        <div class="composer" autocomplete="off">
+          <input
+            id="message-input"
+            type="text"
+            placeholder="Type a message..."
+          />
+          <input id="file-input" type="file" accept="image/*,audio/*,video/*" />
+          <button id="attach-btn" title="Attach">+</button>
+          <button id="send-btn">Send</button>
+        </div>
+      </main>
+    </div>
+
+    <!-- Login overlay -->
+    <div id="login-overlay" class="overlay">
+      <div class="overlay-card">
+        <h2>Sign in or Register</h2>
+        <input id="username-input" placeholder="Username" />
+        <input id="password-input" placeholder="Password" type="password" />
+        <div class="overlay-actions" style="justify-content: flex-start">
+          <button id="login-btn">Login</button>
+          <button id="register-btn">Register</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Profile overlay -->
+    <div id="profile-modal" class="overlay" style="display: none">
+      <div class="overlay-card">
+        <h3>Your profile</h3>
+        <div id="profile-info">
+          <div id="profile-avatar" class="avatar"></div>
+          <div id="profile-fields">
+            <label id="status-label">Status</label>
+            <input id="status-input" placeholder="Set a status" />
+            <label id="profile-label">Profile picture</label>
+            <input id="avatar-file" type="file" accept="image/*" />
+            <div class="overlay-actions">
+              <button id="theme-toggle-btn" type="button">Toggle theme</button>
+              <button id="close-profile-btn">Close</button>
+              <button id="save-profile-btn">Save</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Create group overlay -->
+    <div id="group-modal" class="overlay" style="display: none">
+      <div class="overlay-card">
+        <h3>Create group</h3>
+        <input id="group-name-input" placeholder="Group name" />
+        <div id="group-members-list"></div>
+        <div class="overlay-actions">
+          <button id="cancel-group-btn">Cancel</button>
+          <button id="create-group-btn">Create</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Group members overlay -->
+    <div id="group-members-modal" class="overlay" style="display: none">
+      <div class="overlay-card">
+        <h3 id="group-members-title">Members</h3>
+        <div id="group-members-inner"></div>
+        <div class="overlay-actions">
+          <button id="close-members-btn">Close</button>
+        </div>
+      </div>
+    </div>
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="client.js"></script>
+  </body>
+</html>
