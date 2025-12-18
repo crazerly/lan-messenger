@@ -1,6 +1,6 @@
 # LAN Messenger
 
-A messenger app to connect to users over the same network.
+A messenger app to connect users over the same network.
 
 ## Features
 
@@ -8,7 +8,7 @@ A messenger app to connect to users over the same network.
 - Users can create and manage groups with options to kick and add members
 - Images, videos, and audio files can be sent in chats
 - Users can change their profile picture, status and toggle light/dark mode
-- All messages have end-to-end encryption
+- All messages and files have end-to-end encryption
 
 ## Requirements
 
@@ -63,3 +63,4 @@ _Dark mode_
 ## Planned Features
 
 - [ ] Client-side File Compression
+
